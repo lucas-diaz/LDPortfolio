@@ -3,13 +3,13 @@ import React from 'react';
 
 // == Import
 import Counter from 'src/containers/Counter';
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import projectImg from './testImg.JPG';
+import './styles.scss';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <header>
+    <header className='header'>
       <menu>
         <li>A propos</li>
         <li>Mes realisation</li>
@@ -20,30 +20,34 @@ const App = () => (
     </header>
     <main>
     { /* section a propos*/}
-      <section>
-        <h1>Lucas Diaz Developpeur Web</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia voluptas consequuntur a culpa iure est omnis amet quisquam nemo qui!</p>
+      <section className="about">
+      <div className='test'></div>
+        <div className="about_text">        
+          <div>Lucas Diaz</div>
+          <h1>Developpeur Web</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia voluptas consequuntur a culpa iure est omnis amet quisquam nemo qui!</p>
+        </div>
       </section>
       { /* section realisation*/}
-      <section>
+      <section className="portfolio">
         <h2>Mes Réalisation</h2>
         { /* projet 1*/}
-        <div>
-          <img></img>
-          <div>
-            <h3>Site personnel</h3>
+        <div className="project">
+          <img className='project_img' alt=' du projet' src={projectImg} />
+          <div className='project_description'>
+            <h3 className='project_title'>Site personnel</h3>
             <p>Premiere version de mon site personnel qui contient mes réalisation ainsi que des information me concernant, Réalisé avec React en utilisant scss</p>
-            <div>
-              <div><a href='' >Demo</a></div>
-              <div><a href='' >Github</a></div>
+            <div className='links'>
+              <div className='project_link'><a href='' >Demo</a></div>
+              <div className='project_link'><a href='' >Github</a></div>
             </div>
           </div>
         </div>
         { /* projet 2*/}
-        <div>
-          <img></img>
-          <div>
-            <h3>E-commerce</h3>
+        <div className="project">
+          <img className='project_img' alt=' du projet' src={projectImg} />
+          <div className='project_description'>
+            <h3 className='project_title'>E-commerce</h3>
             <p>SIte d'e-comerce blablalbalblalbalbla blablalba lbalbla balbla bb alblblbal</p>
             <div>
               <div><a href='' >Demo</a></div>
@@ -52,10 +56,10 @@ const App = () => (
           </div>
         </div>  
         { /* projet 3*/}
-        <div>
-          <img></img>
-          <div>
-            <h3>Jeux candy crush</h3>
+        <div className="project">
+          <img className='project_img' alt=' du projet' src={projectImg} />
+          <div className='project_description'>
+            <h3 className='project_title'>Jeux candy crush</h3>
             <p>une version de candy crush pour comprendre certaine fonctionalité  </p>
             <div>
               <div><a href='' >Demo</a></div>
